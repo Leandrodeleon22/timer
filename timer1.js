@@ -24,27 +24,16 @@ const highestNumber = numberToBeep.reduce((acc, current) => {
 let time = 1;
 let timeOut = 1000;
 
-// for (let index = 1; index <= highestNumber; index++) {
-//   setTimeout(() => {
-//     console.log(time);
-//     if (numberToBeep.includes(time)) {
-//       process.stdout.write("\x07");
-//     }
-//     time += 1;
-//   }, timeOut);
+for (let index = 1; index <= highestNumber; index++) {
+  setTimeout(() => {
+    console.log(time);
+    if (numberToBeep.includes(time)) {
+      process.stdout.write("\x07");
+    }
+    time += 1;
+  }, timeOut);
 
-//   timeOut += 1000;
-// }
-
-// timeToBeep.forEach((element) => {
-//   setTimeout(() => {
-//     console.log(time);
-//     time += 1;
-//   }, timeOut);
-
-//   timeOut += 1000;
-// });
-
-// console.log(highestNumber);
+  timeOut += 1000;
+}
 
 // process.stdout.write("\x07");
