@@ -1,10 +1,5 @@
 const timeToBeep = process.argv.slice(2);
 
-//[ '10', '3', '5', '15', '9' ]
-//get the highest number
-//loop the given secs
-//setTimeout inside the loop
-// set time
 const numberToBeep = timeToBeep
   .map((el) => {
     return Number(el);
@@ -13,8 +8,6 @@ const numberToBeep = timeToBeep
     return el;
   })
   .filter((el) => el > 0);
-
-console.log(numberToBeep);
 
 const highestNumber = numberToBeep.reduce((acc, current) => {
   if (acc > current) return acc;
@@ -35,5 +28,3 @@ for (let index = 1; index <= highestNumber; index++) {
 
   timeOut += 1000;
 }
-
-// process.stdout.write("\x07");
